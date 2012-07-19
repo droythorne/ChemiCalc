@@ -7,12 +7,22 @@
 //
 
 #include <iostream>
-
+#include <vector>
+using namespace std;
 int main(int argc, const char * argv[])
 {
 
     // insert code here...
-    std::cout << "Hello, World!\n";
+    vector<int> myVec(4);
+    myVec.push_back(2);
+    myVec.push_back(3);
+    myVec.push_back(1);
+    sort(myVec.begin(),
+         myVec.end(),
+         [](const int &a, const int &b) -> bool
+         {
+             return (a < b);
+         });
+    cout << "Hello, World!\n";
     return 0;
 }
-
