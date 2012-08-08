@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A62672915C5CD5A00A7D961 /* ChemicalProperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A62672815C5CD5A00A7D961 /* ChemicalProperties.cpp */; };
 		3A89E31315B8451500960601 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A89E31215B8451500960601 /* main.cpp */; };
 		3A89E31515B8451500960601 /* TestXCode.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A89E31415B8451500960601 /* TestXCode.1 */; };
+		3AF56DC715C6AA01001DD580 /* InputParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AF56DC615C6AA01001DD580 /* InputParser.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3A89E30C15B8451500960601 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
@@ -22,12 +24,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		3AA3F0F015C2A5F000991BF2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = resources;
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3A89E30E15B8451500960601 /* TestXCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestXCode; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A62672815C5CD5A00A7D961 /* ChemicalProperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChemicalProperties.cpp; sourceTree = "<group>"; };
+		3A89E30E15B8451500960601 /* ChemiCalc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChemiCalc; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A89E31215B8451500960601 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3A89E31415B8451500960601 /* TestXCode.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TestXCode.1; sourceTree = "<group>"; };
+		3AA3F0F315C2D71200991BF2 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		3AA3F0F415C2F95F00991BF2 /* ChemicalProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChemicalProperties.h; sourceTree = "<group>"; };
+		3AF56DC415C69D9C001DD580 /* InputParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputParser.h; sourceTree = "<group>"; };
+		3AF56DC615C6AA01001DD580 /* InputParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputParser.cpp; sourceTree = "<group>"; };
+		3AF56DD415D2CB1B001DD580 /* matlabinput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = matlabinput.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +61,7 @@
 		3A89E30315B8451500960601 = {
 			isa = PBXGroup;
 			children = (
-				3A89E31115B8451500960601 /* TestXCode */,
+				3A89E31115B8451500960601 /* ChemiCalc */,
 				3A89E30F15B8451500960601 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,38 +69,54 @@
 		3A89E30F15B8451500960601 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A89E30E15B8451500960601 /* TestXCode */,
+				3A89E30E15B8451500960601 /* ChemiCalc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3A89E31115B8451500960601 /* TestXCode */ = {
+		3A89E31115B8451500960601 /* ChemiCalc */ = {
 			isa = PBXGroup;
 			children = (
+				3AA3F0EC15C2919100991BF2 /* resources */,
 				3A89E31215B8451500960601 /* main.cpp */,
 				3A89E31415B8451500960601 /* TestXCode.1 */,
+				3AA3F0F315C2D71200991BF2 /* constants.h */,
+				3AA3F0F415C2F95F00991BF2 /* ChemicalProperties.h */,
+				3A62672815C5CD5A00A7D961 /* ChemicalProperties.cpp */,
+				3AF56DC415C69D9C001DD580 /* InputParser.h */,
+				3AF56DC615C6AA01001DD580 /* InputParser.cpp */,
 			);
-			path = TestXCode;
+			name = ChemiCalc;
+			path = ChemiCalc;
+			sourceTree = "<group>";
+		};
+		3AA3F0EC15C2919100991BF2 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3AF56DD415D2CB1B001DD580 /* matlabinput.txt */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A89E30D15B8451500960601 /* TestXCode */ = {
+		3A89E30D15B8451500960601 /* ChemiCalc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A89E31815B8451500960601 /* Build configuration list for PBXNativeTarget "TestXCode" */;
+			buildConfigurationList = 3A89E31815B8451500960601 /* Build configuration list for PBXNativeTarget "ChemiCalc" */;
 			buildPhases = (
 				3A89E30A15B8451500960601 /* Sources */,
 				3A89E30B15B8451500960601 /* Frameworks */,
 				3A89E30C15B8451500960601 /* CopyFiles */,
+				3AA3F0F015C2A5F000991BF2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TestXCode;
-			productName = TestXCode;
-			productReference = 3A89E30E15B8451500960601 /* TestXCode */;
+			name = ChemiCalc;
+			productName = ChemiCalc;
+			productReference = 3A89E30E15B8451500960601 /* ChemiCalc */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -94,7 +127,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 3A89E30815B8451500960601 /* Build configuration list for PBXProject "TestXCode" */;
+			buildConfigurationList = 3A89E30815B8451500960601 /* Build configuration list for PBXProject "ChemiCalc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -106,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A89E30D15B8451500960601 /* TestXCode */,
+				3A89E30D15B8451500960601 /* ChemiCalc */,
 			);
 		};
 /* End PBXProject section */
@@ -117,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A89E31315B8451500960601 /* main.cpp in Sources */,
+				3A62672915C5CD5A00A7D961 /* ChemicalProperties.cpp in Sources */,
+				3AF56DC715C6AA01001DD580 /* InputParser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +180,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -167,6 +203,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -175,21 +212,26 @@
 		3A89E31915B8451500960601 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
+				"OTHER_LDFLAGS[arch=*]" = "-ljansson";
+				PRODUCT_NAME = ChemiCalc;
 			};
 			name = Debug;
 		};
 		3A89E31A15B8451500960601 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
+				"OTHER_LDFLAGS[arch=*]" = "-ljansson";
+				PRODUCT_NAME = ChemiCalc;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A89E30815B8451500960601 /* Build configuration list for PBXProject "TestXCode" */ = {
+		3A89E30815B8451500960601 /* Build configuration list for PBXProject "ChemiCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A89E31615B8451500960601 /* Debug */,
@@ -198,7 +240,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A89E31815B8451500960601 /* Build configuration list for PBXNativeTarget "TestXCode" */ = {
+		3A89E31815B8451500960601 /* Build configuration list for PBXNativeTarget "ChemiCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A89E31915B8451500960601 /* Debug */,
